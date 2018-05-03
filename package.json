@@ -1,0 +1,26 @@
+{
+  "name": "some-random-api",
+  "version": "1.0.0",
+  "description": "some random apis for all your needs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telkenes/some-random-api.git"
+  },
+  "keywords": [
+    "api",
+    "free"
+  ],
+  "author": "Telk",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/telkenes/some-random-api/issues"
+  },
+  "homepage": "https://github.com/telkenes/some-random-api#readme",
+  "dependencies": {
+    "snekfetch": "^4.0.0"
+  }
+}
