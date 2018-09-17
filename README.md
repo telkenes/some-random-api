@@ -10,14 +10,17 @@ click [here](https://some-random-api.ml/wrappers) for the list of all wrappers!
 ```javascript
 var api = require('some-random-api');
 
-api.meme(function(err, meme) {
-    console.log(meme) //gets a random selected meme
-})
+async function lyrics() {
+var lyrics = await api.lyrics('firestone')
+console.log(lyrics)
+}
 
-api.pandafact(function(err, fact) {
-    console.log(fact) //gets a panda fact from the api
-})
+lyrics()
 
+//or use .then()
+api.pandaimg().then(img => {
+    console.log(img)
+})
 
 ```
 
