@@ -1,6 +1,6 @@
 {
   "name": "some-random-api",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "some random apis for all your needs",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/telkenes/some-random-api#readme",
   "dependencies": {
-    "snekfetch": "^4.0.0"
+    "node-fetch": "^2.2.0"
   }
 }
