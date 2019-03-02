@@ -1,33 +1,40 @@
-# Some Random Api
-This is a js wrapper for some-random-api.ml
-for more information about some-random-api
-check the [docs](https://some-random-api.ml/docs)
+# [Some Random Api](https://some-random-api.ml)
+This is a JS wrapper for [some-random-api.ml](https://some-random-api.ml)
+
+
+For more information about [some-random-api](https://some-random-api.ml)
+Check the [docs](https://some-random-api.ml/docs)
 
 Looking for wrappers for other languages?
-click [here](https://some-random-api.ml/wrappers) for the list of all wrappers!
+Go [here](https://some-random-api.ml/wrappers) for the list of all wrappers!
 
-### code example
+
+
+### Code Examples
+
 ```javascript
-var api = require('some-random-api');
+const randomApi = require('some-random-api');
 
 async function lyrics() {
-var lyrics = await api.lyrics('firestone')
-console.log(lyrics)
+    var lyrics = await randomApi.lyrics('firestone');
+    console.log(lyrics);
 }
+lyrics();
 
-lyrics()
 
-//or use .then()
-api.pandaimg().then(img => {
-    console.log(img)
-})
-
+//or use .then();
+randomApi.pandaimg().then(img => {
+    console.log(img);
+});
 ```
 
-### about some random api
-some random api was made by Telk#7197 for 
-discord bot makers that likes to add animal facts, images and other things
-contant me on discord - Telk#7197
+
+### About
+[Some-random-api](https://some-random-api.ml) was made by Telk#4038 for 
+discord bot developers that would like to add animal facts, images and other things
+
+Contact me on discord - Telk#4038
+
 
 ### License
 Released under the [Apache 2.0](LICENSE) License
