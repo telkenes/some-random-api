@@ -20,12 +20,20 @@ export interface LyricsResponse extends BaseResponse {
 	links: object;
 }
 
-export interface BinaryResponse extends BaseResponse {
+export interface BinaryEncodeResponse extends BaseResponse {
 	binary: string;
 }
 
-export interface Base64Response extends BaseResponse {
+export interface BinaryDecodeResponse extends BaseResponse {
+	text: string;
+}
+
+export interface Base64EncodeResponse extends BaseResponse {
 	base64: string;
+}
+
+export interface Base64DecodeResponse extends BaseResponse {
+	text: string;
 }
 
 export interface MemeResponse extends BaseResponse {
@@ -54,16 +62,28 @@ export class OtherCategory extends Category {
 		return this.request('/lyrics', { title });
 	}
 
-	public binary(text: string): Promise<BinaryResponse> {
+	public binaryEncode(text: string): Promise<BinaryEncodeResponse> {
 		if (!text) throw new MissingParameter('text');
 
 		return this.request('/binary', { text });
 	}
 
-	public base64(encode: string): Promise<Base64Response> {
+	public binaryDecode(decode: string): Promise<BinaryDecodeResponse> {
+		if (!decode) throw new MissingParameter('decode');
+
+		return this.request('/binary', { decode });
+	}
+
+	public base64Encode(encode: string): Promise<Base64EncodeResponse> {
 		if (!encode) throw new MissingParameter('encode');
 
 		return this.request('/base64', { encode });
+	}
+
+	public base64Decode(decode: string): Promise<Base64DecodeResponse> {
+		if (!decode) throw new MissingParameter('decode');
+
+		return this.request('/base64', { decode });
 	}
 
 	public meme(): Promise<MemeResponse> {
