@@ -10,6 +10,7 @@
 		"allowSyntheticDefaultImports": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
+		"types": ["@types/node", "@types/node-fetch"],
 		"lib": [
 			"esnext",
 			"esnext.array",
