@@ -7,6 +7,7 @@
 	"scripts": {
 		"test": "node test",
 		"build": "tsc",
+		"postinstall": "npm run build",
 		"watch": "tsc -w",
 		"lint": "eslint src --ext .ts",
 		"fix": "eslint src --ext .ts --fix"
