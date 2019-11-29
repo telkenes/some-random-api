@@ -10,12 +10,22 @@ export interface WelcomeOptions {
 	textcolor: 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink' | 'black' | 'white';
 }
 
+/**
+ * Welcome Category - includes welcome images endpoints
+ */
 export class WelcomeCategory extends Category {
+	/**
+	 * Create new WelcomeCategory
+	 */
 	public constructor() {
-		super();
-		this.baseURL = 'https://welcome-imgs.some-random-api.ml';
+		super('', 'https://welcome-imgs.some-random-api.ml');
 	}
 
+	/**
+	 * Get join image
+	 * @param options {WelcomeOptions} options for image generation
+	 * @see https://welcome-imgs.some-random-api.ml/documentation
+	 */
 	public join(options: WelcomeOptions): Promise<Buffer> {
 		return this.requestBuffer(`/img/${options.template}/${options.background}`, {
 			type: 'join',
@@ -28,6 +38,11 @@ export class WelcomeCategory extends Category {
 		});
 	}
 
+	/**
+	 * Get leave image
+	 * @param options {WelcomeOptions} options for image generation
+	 * @see https://welcome-imgs.some-random-api.ml/documentation
+	 */
 	public leave(options: WelcomeOptions): Promise<Buffer> {
 		return this.requestBuffer(`/img/${options.template}/${options.background}`, {
 			type: 'leave',

@@ -10,15 +10,32 @@ export interface LinkResponse extends BaseResponse {
 	link: string;
 }
 
+/**
+ * Base Category
+ */
 export abstract class Category {
-	public baseURL = 'https://some-random-api.ml';
-	public baseEndpoint!: string;
+	/** Base URL */
+	public baseURL: string;
+	/** Base endpoint */
+	public baseEndpoint: string;
 
-	public constructor(baseEndpoint?: string) {
-		this.baseEndpoint = baseEndpoint || '';
+	/**
+	 * Create new category class
+	 * @param baseEndpoint {string} base endpoint for sub-endpoints (default '')
+	 * @param baseURL {string} base URL for requests (default 'https://some-random-api.ml')
+	 */
+	public constructor(baseEndpoint = '', baseURL = 'https://some-random-api.ml') {
+		this.baseURL = baseURL;
+		this.baseEndpoint = baseEndpoint;
 	}
 
-	public async request(endpoint: string, query?: object) {
+	/**
+	 * Perform new request
+	 * @param endpoint {string} endpoint to request
+	 * @param query {object} query to attach
+	 * @returns {Promise<any>} response of API
+	 */
+	public async request(endpoint: string, query?: object): Promise<any> {
 		const URL = this.baseURL + this.baseEndpoint + endpoint;
 		let params;
 
@@ -34,7 +51,13 @@ export abstract class Category {
 		return json;
 	}
 
-	public async requestBuffer(endpoint: string, query?: object) {
+	/**
+	 * Perform new buffer request
+	 * @param endpoint {string} endpoint to request
+	 * @param query {object} query to attach
+	 * @returns {Promise<Buffer>} response of API
+	 */
+	public async requestBuffer(endpoint: string, query?: object): Promise<Buffer> {
 		const URL = this.baseURL + this.baseEndpoint + endpoint;
 		let params;
 

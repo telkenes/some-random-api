@@ -33,11 +33,22 @@ export interface PokedexResponse {
 	generation: string;
 }
 
+/**
+ * Pokemon Category - includes pokemon endpoints
+ */
 export class PokemonCategory extends Category {
+	/**
+	 * Get a Pikachu image (undocumented)
+	 * @see https://some-random-api.ml/docs/other/pikachuimg
+	 */
 	public pikachuimg(): Promise<LinkResponse> {
 		return this.request('/pikachuimg');
 	}
 
+	/**
+	 * Get a pokemon index data
+	 * @see https://some-random-api.ml/docs/other/pokedex
+	 */
 	public pokedex(pokemon: string): Promise<PokedexResponse> {
 		if (!pokemon) throw new MissingParameter('pokemon');
 		return this.request('/pokedex', { pokemon });
