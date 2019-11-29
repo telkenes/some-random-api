@@ -6,3 +6,4 @@ export * from './structures/ImagesCategory';
 export * from './structures/OtherCategory';
 export * from './structures/PokemonCategory';
 export * from './structures/WelcomeCategory';
+export * from './util';
