@@ -13,18 +13,18 @@ Go [here](https://some-random-api.ml/wrappers) for the list of all wrappers!
 ### Code Examples
 
 ```javascript
-const randomApi = require('some-random-api');
+const { api } = require('some-random-api');
 
 async function lyrics() {
-    var lyrics = await randomApi.lyrics('firestone');
-    console.log(lyrics);
+    let res = await api.other.lyrics('firestone');
+    console.log(res);
 }
 lyrics();
 
 
 //or use .then();
-randomApi.pandaimg().then(img => {
-    console.log(img);
+randomApi.img.panda().then(res => {
+    console.log(res);
 });
 ```
 
