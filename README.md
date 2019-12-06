@@ -23,7 +23,7 @@ lyrics();
 
 
 //or use .then();
-randomApi.img.panda().then(res => {
+api.img.panda().then(res => {
     console.log(res);
 });
 ```
