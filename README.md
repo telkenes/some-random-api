@@ -1,40 +1,43 @@
 # [Some Random Api](https://some-random-api.ml)
-This is a JS wrapper for [some-random-api.ml](https://some-random-api.ml)
+[![NpmPackage](https://nodei.co/npm/some-random-api.png?downloads=true)](https://www.npmjs.com/package/some-random-api)
 
+[![Discord](https://discordapp.com/api/guilds/486116455163625513/embed.png?style=shield)](https://discord.gg/tTUMWFd) 
 
-For more information about [some-random-api](https://some-random-api.ml)
-Check the [docs](https://some-random-api.ml/docs)
+## About
+
+Some Random Api is an api where you can find a lot of random apis from games, sites, even animal facts!
+
+__Advantages of Some Random Api__
+- Simple rest api
+- easy to use
+- free of charge
+- no keys
+
+__For more information__ Check the [docs](https://some-random-api.ml/docs)
 
 Looking for wrappers for other languages?
 Go [here](https://some-random-api.ml/wrappers) for the list of all wrappers!
 
 
 
-### Code Examples
+## Code Examples
 
 ```javascript
 const { api } = require('some-random-api');
 
-async function lyrics() {
-    let res = await api.other.lyrics('firestone');
-    console.log(res);
-}
-lyrics();
-
-
-//or use .then();
 api.img.panda().then(res => {
     console.log(res);
 });
 ```
 
 
-### About
-[Some-random-api](https://some-random-api.ml) was made by Telk#4038 for 
-discord bot developers that would like to add animal facts, images and other things
+## Links
+- Contact me on discord - Telk#4038
+- [Discord server](https://discord.gg/tTUMWFd)
+- [GitHub Repo](https://github.com/telkenes/some-random-api)
+- [NPM](https://www.npmjs.com/package/some-random-api)
+ 
 
-Contact me on discord - Telk#4038
 
-
-### License
+## License
 Released under the [Apache 2.0](LICENSE) License
