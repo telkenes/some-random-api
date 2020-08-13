@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import { posix } from 'path';
-import { URLSearchParams } from 'url';
+import { URL, URLSearchParams } from 'url';
 import { Path, Endpoint } from './Endpoint';
 import { loadEndpoints } from '../util';
 import { EndpointNotExist, MissingParameter, PremiumNeeded } from '../util/Errors';
@@ -42,7 +42,7 @@ export class SRAClient {
 				await wait(this.cooldowns.get(path)?.ends! - Date.now());
 		}
 
-		const URL = this.baseURL + posix.join(this.baseEndpoint, path);
+		const url = new URL(posix.join(this.baseEndpoint, path), this.baseURL);
 		const params = new URLSearchParams();
 
 		if (this.apiKey) params?.append('key', this.apiKey);
@@ -56,7 +56,7 @@ export class SRAClient {
 		this.validateRequest(endpoint, query);
 
 		try {
-			const res = await fetch(params ? `${URL}?${params}` : URL);
+			const res = await fetch(params ? `${url}?${params}` : url);
 			this.cooldowns.set(path, { path, ends: Date.now() + endpoint.cooldown || 100 });
 			const type = res.headers.get('content-type');
 			let output;

@@ -79,18 +79,14 @@ export type Path =
 	'/canvas/rgb'             |
 
 	// Other
-	'/pokedex'  |
-	'/chatbot'  |
-	'/mc'       |
-	'/lyrics'   |
-	'/binary'   | // encode & decode
-	'/base64'   | // encode & decode
-	'/meme'     |
+	'/pokedex' |
+	'/chatbot' |
+	'/mc'      |
+	'/lyrics'  |
+	'/binary'  | // encode & decode
+	'/base64'  | // encode & decode
+	'/meme'    |
 	'/bottoken';
-
-	// Welcome API //TODO: Add support
-	// '/welcome/join' |
-	// '/welcome/leave';
 
 export class Endpoint {
 	public query?: EndpointOptions['query'];

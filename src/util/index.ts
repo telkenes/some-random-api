@@ -136,8 +136,4 @@ export function loadEndpoints(endpoints: Map<string, Endpoint>) {
 	}}));
 	endpoints.set('/meme', new Endpoint('/meme'));
 	endpoints.set('/bottoken', new Endpoint('/bottoken'));
-
-	// Welcome API //TODO: Add support
-	// endpoints.set('/welcome/join', new Endpoint('/welcome/join'));
-	// endpoints.set('/welcome/leave', new Endpoint('/welcome/leave'));
 }
