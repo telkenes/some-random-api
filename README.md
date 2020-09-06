@@ -23,11 +23,10 @@ Go [here](https://some-random-api.ml/wrappers) for the list of all wrappers!
 ## Code Examples
 
 ```javascript
-const { api } = require('some-random-api');
+const { SRAClient } = require('some-random-api');
 
-api.img.panda().then(res => {
-    console.log(res);
-});
+const sraClient = new SRAClient(/* Insert API key if available */);
+sraClient.fetch('/chatbot', { message: 'Hello' }).then(console.log);
 ```
 
 

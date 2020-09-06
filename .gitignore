@@ -26,6 +26,7 @@ pids
 ormconfig.json
 *.tsbuildinfo
 config*.yml
+.vscode
 
 # Build
 dist/

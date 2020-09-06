@@ -1,5 +1,9 @@
-const { api } = require('../dist');
+const { SRAClient } = require('../dist');
 
 (async () => {
-	console.log(await api.other.meme());
+	const start = Date.now();
+	const client = new SRAClient();
+	let output = await client.fetch('/chatbot', { message: 'Hello' });
+	console.log(output);
+	console.log(Date.now() - start);
 })();
