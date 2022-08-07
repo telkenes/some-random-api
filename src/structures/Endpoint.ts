@@ -50,7 +50,6 @@ export type Path =
 	'/animal/kangaroo' |
 	'/animal/elephant' |
 	'/animal/giraffe'  |
-	'/animal/whale'    |
 
 	// Gif
 	'/animu/wink' |
