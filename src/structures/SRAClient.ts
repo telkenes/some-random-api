@@ -14,7 +14,7 @@ interface Cooldown {
 }
 
 export class SRAClient {
-	public baseURL = 'https://some-random-api.ml';
+	public baseURL = 'https://some-random-api.com';
 	public baseEndpoint = '/';
 	private endpoints!: Map<Path, Endpoint>;
 	private cooldowns: Map<Path, Cooldown> = new Map();
